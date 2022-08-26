@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg  bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="class= nav-link text-white-50" routerLink="home" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">{{'Home' | uppercase | translate}}</a>
+        </li>
+
+        <li class="nav-item ">
+          <a class="nav-link text-white-50" routerLink="register" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> {{'Register'  | translate}} </a>
+        </li>
+        <li class="nav-item" text-white-50>
+          <a class="nav-link text-white-50" routerLink="login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{'Login'  | translate}}</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link text-white-50" routerLink="profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{'Profile'  | translate}}</a>
+        </li>
+        <li class="nav-item " *ngIf="authService.isLogin()">
+          <a (click)="logout()" class="nav-link text-white-50" routerLink="profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{'Logout'  | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="changeLang('en')" class="nav-link text-white-50"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">English</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="changeLang('ar')" class="nav-link text-white-50" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Arabic</a>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>

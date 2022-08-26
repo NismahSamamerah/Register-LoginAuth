@@ -1,0 +1,13 @@
+.container{
+  width: 70%;
+}
+h1{
+  text-align: center;
+}
+input.ng-touched.ng-invalid{
+  border: 1px solid rgb(205, 25, 25);
+}
+p{
+  font-size: 14epx;
+  color: rgb(205, 25, 25);
+}
