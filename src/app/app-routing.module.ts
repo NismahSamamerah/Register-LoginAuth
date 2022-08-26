@@ -11,7 +11,7 @@ const routes: Routes = [
   {path :'register' , component :RegisterComponent , canActivate :[GuestGuard]},
   {path :'login' , component :LoginComponent , canActivate :[GuestGuard]},
   {path :'home' , component :HomeComponent},
-  {path : 'profile/ :id' , component : ProfileComponent , canActivate :[AuthGuard]}
+  {path : 'profile' , component : ProfileComponent , canActivate :[AuthGuard]}
 
 ];
 
