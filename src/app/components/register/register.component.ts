@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthService } from 'src/app/services/auth.service';
-import { IUser } from '../interfaces/userInterface';
+import { IUser } from '../../interfaces/userInterface';
 
 // export class CustomValidators {
 //  export function mustMatch(controlPassword: string, matchingControlPassword: string) {
