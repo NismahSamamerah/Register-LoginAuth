@@ -18,7 +18,7 @@ export class NavBarComponent implements OnInit {
   constructor(public authService : AuthService , public router : Router , public translate: TranslateService,) {
     this.currentLang = localStorage.getItem("currentLang") || "en";
         this.translate.use(this.currentLang)
-   }
+  }
 Name : string='nismah'
   ngOnInit(): void {
   }
@@ -26,7 +26,7 @@ Name : string='nismah'
     this.authService.logOut();
     this.router.navigate(['login']);
   }
-  
+
   changeLang(lang: string) {
     localStorage.setItem("currentLang", lang)
     this.translate.use(lang)

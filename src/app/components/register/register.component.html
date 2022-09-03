@@ -1,8 +1,8 @@
-<div class="container">
-  <h1>Sign Up</h1>
+<div class="container mt-3">
+  <h1>{{'Sign Up' |translate}}</h1>
 <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)" class="row g-3 mt-3">
   <div class="col-md-6">
-    <label  class="form-label">First Name</label>
+    <label  class="form-label">{{'First Name' |translate}}</label>
     <input type="text" formControlName="firstName" class="form-control" >
     <p *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
     *{{
@@ -17,7 +17,7 @@
   </p>
   </div>
   <div class="col-md-6">
-    <label  class="form-label">Last Name</label>
+    <label  class="form-label">{{'Last Name' | translate}}</label>
     <input type="text" class="form-control" formControlName="lastName">
     <p *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched"
     role="alert">
@@ -33,11 +33,11 @@
   </p>
   </div>
   <div class="col-md-6">
-    <label  class="form-label">Gender</label>
+    <label  class="form-label">{{'Gender' | translate}}</label>
     <select  class="form-select" formControlName="gender" >
 
-      <option value="1">Male</option>
-      <option value="2">Female</option>
+      <option value="1">{{'Male' | translate}}</option>
+      <option value="2">{{'Female' | translate}}</option>
     </select>
     <p *ngIf="registerForm.get('gender')?.invalid && registerForm.get('gender')?.touched">
     *{{
@@ -46,7 +46,7 @@
   </p>
   </div>
   <div class="col-md-6" >
-    <label class="form-label">Age</label>
+    <label class="form-label">{{'Age' |translate}}</label>
     <input type="number" class="form-control" formControlName="age">
     <p *ngIf="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
     *{{
@@ -61,7 +61,7 @@
   </p>
   </div>
   <div class="col-md-6">
-    <label  class="form-label">Email address</label>
+    <label  class="form-label">{{'Email address' | translate}}</label>
     <input type="email" class="form-control" formControlName="email">
     <p *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
     *{{
@@ -73,7 +73,7 @@
   </p>
   </div>
   <div class="col-md-6">
-    <label class="form-label">Password</label>
+    <label class="form-label">{{'Password' | translate}}</label>
     <input type="password" class="form-control" formControlName="password">
     <p *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
     *{{
@@ -88,7 +88,7 @@
   </p>
   </div>
   <div class="mb-3">
-    <label class="form-label">Confirm Password</label>
+    <label class="form-label">{{'Confirm Password' |translate}}</label>
     <input type="password" class="form-control" formControlName="confirmPassword" >
     <p *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched ">
       *{{

@@ -1,7 +1,13 @@
 {
   "HOME":"Home",
-  "Register " :"Rigister",
+  "Register " :"Register",
   "Login" : "Login",
   "Profile" : "Profile",
-  "Logout" : "Logout"
+  "Logout" : "Logout",
+  "Arabic" :"Arabic",
+  "English" : "English",
+
+
+  "Sign Up":"Sign Up"
+
 }

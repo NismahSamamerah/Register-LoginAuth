@@ -21,11 +21,17 @@ getUsers(){
     this.logIn(newUser);
   }
   logIn(newUser :IUser){
-    try {
-      localStorage.setItem('loginUser', JSON.stringify(newUser));
-  } catch(e: any) {
-      throw Error(e.message)
-  }
+    for(let user of this.users){
+      if(user.email === newUser.email && user.password === newUser.password){
+        console.log(newUser.email);
+        try {
+          localStorage.setItem('loginUser', JSON.stringify(user));
+      } catch(e: any) {
+          throw Error(e.message)
+      }
+      }
+    }
+
 }
 getLogginUsers(){
   return JSON.parse(JSON.parse(JSON.stringify(localStorage.getItem('loginUser'))));

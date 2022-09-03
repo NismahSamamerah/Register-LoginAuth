@@ -8,10 +8,11 @@ import { AuthGuard } from './gruades/auth.guard';
 import { GuestGuard } from './gruades/guest.guard';
 
 const routes: Routes = [
+  
   {path :'register' , component :RegisterComponent , canActivate :[GuestGuard]},
   {path :'login' , component :LoginComponent , canActivate :[GuestGuard]},
   {path :'home' , component :HomeComponent},
-  {path : 'profile' , component : ProfileComponent , canActivate :[AuthGuard]}
+  {path :'profile' , component : ProfileComponent , canActivate :[AuthGuard]}
 
 ];
 
